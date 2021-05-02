@@ -1,0 +1,41 @@
+function getStyle(elem,attr){
+   return elem.currentStyle ? elem.currentStyle[attr]:getComputedStyle(elem)[attr]
+}
+function startMove(node,cssObj,complete){
+	//其中一个目的值达到就关闭定时器了
+	//要所有动画都到达目的值在关闭
+	clearInterval(node.time)
+		
+		node.time = setInterval(function(){
+			var isend = true
+			// var icur = parseInt(getStyle(node,attr))
+			for(var attr in cssObj){
+				iTarge = cssObj[attr]
+				var icur = null
+				if(attr == "opacity"){
+					icur = parseInt(parseFloat(getStyle(node,"opacity"))*100)
+				}else{
+					icur = parseInt(getStyle(node,attr))
+				}
+				var speed = (iTarge - icur)/8
+				speed = speed > 0 ? Math.ceil(speed):Math.floor(speed)
+				
+				if(attr == "opacity"){
+					icur += speed
+					node.style.opacity = icur / 100
+				}else{
+					node.style[attr] = icur + speed +'px'
+				}
+				
+				if(icur != iTarge){
+					isend = false
+				}
+			}
+			if(isend){
+				clearInterval(node.time)
+				if(complete){
+					complete.call(node)
+				}
+			}
+			},30)
+	}
