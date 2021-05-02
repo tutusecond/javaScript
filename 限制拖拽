@@ -1,0 +1,65 @@
+/*
+	限制出界的拖拽，要拥有拖拽的功能
+*/
+function Drag(id){
+	this.Odiv = document.getElementById(id)
+	_this = this
+	this.Odiv.onmousedown = function(ev){
+		_this.funcDown(ev)
+	}
+	this.Odiv.onmouseup = this.funcUp
+}
+Drag.prototype.funcDown = function(ev){
+	var e = ev || window.event
+	
+	this.offsetX = e.clientX - this.Odiv.offsetLeft
+	this.offsetY = e.clientY - this.Odiv.offsetTop
+	// console.log(e.clientX,e.clientY)
+	// console.log(Odiv.offsetLeft,Odiv.offsetTop)
+	// console.log(offsetX,offsetY)
+	_this = this
+	document.onmousemove = function(ev){
+		_this.funcMove(ev)
+	}
+}
+Drag.prototype.funcMove=function(ev){
+	var e = ev || window.event
+	this.Odiv.style.left = e.clientX - this.offsetX + 'px'
+	this.Odiv.style.top = e.clientY - this.offsetY + 'px'
+	
+}
+Drag.prototype.funcUp = function(){
+	document.onmousemove = null
+}
+
+function LimitDrag(id){
+	Drag.apply(this,[id])
+}
+
+//继承方法	原型链
+for(var funcName in Drag.prototype){
+	LimitDrag.prototype[funcName] = Drag.prototype[funcName]
+}
+LimitDrag.prototype.funcMove=function(ev){
+	var e = ev || window.event
+	var l = e.clientX - this.offsetX
+	var t = e.clientY - this.offsetY
+	var windowWidth = document.documentElement.clientWidth || document.body.clientWidth
+	if(l <= 0){
+		l = 0
+	}
+	if(l >= windowWidth - this.Odiv.offsetWidth){
+		l = windowWidth - this.Odiv.offsetWidth
+	}
+	var windowHeight = document.documentElement.clientHeight || document.body.clientHeight
+	if(t <= 0){
+		t = 0
+	}
+	if(t >= windowHeight - this.Odiv.offsetHeight){
+		t = windowHeight - this.Odiv.offsetHeight
+	}
+	this.Odiv.style.left = l + 'px'
+	this.Odiv.style.top = t + 'px'
+	
+}
+
