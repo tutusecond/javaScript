@@ -1,0 +1,29 @@
+.top {
+	width: 150px;
+	height: 150px;
+	margin: 100px auto;
+	perspective: 800px;
+}
+
+.pmain{
+	transform-style: preserve-3d;
+	width: 150px;
+	margin-left: -75px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transition: all .5s;
+}
+
+.pmain img {
+	width: 150px;
+	height: 200px;
+	position: absolute;
+	transition: all .5s;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #fff;
+}
+
+.pmain img.active {
+	box-shadow: 0 0 15px #f99;
+}

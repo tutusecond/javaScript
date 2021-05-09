@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./css/1.css"/>
+		<link rel="stylesheet" type="text/css" href="css/轮播图.css"/>
+		<style type="text/css">
+			.body{border: 1px solid black;height: 800px;width: 90%;margin:auto ;}
+			.body>a{font:bold 40px/100px 黑体;margin:auto ;display: inline-block;width: 100%;border: 1px solid red;text-align: center;color: #8b0000;}
+			.body>a:hover{text-decoration:underline;}
+			.body1,.body2,.body3{border: 1px solid black;width: 49.5%;height: 300px;float: left;}
+			.body1>li{margin: 20px;margin-left: 25px;margin-top: 0px; font-weight: bold;font-size: 18px;list-style-type: square;color: #000000;}
+			/* .body1>li>a:link{color: #000000;} */
+			.body1>li>a{color: #000000;}
+			.body2>li{margin: 20px;margin-left: 25px;margin-top: 0px; font-weight: bold;font-size: 18px;list-style-type: square;color: #000000;}
+		/* 	.body2>li>a:link{color: #ffffff;} */
+			.body2>li>a{color: #000000;}
+			.body3 a:hover{text-decoration:underline;color: red;}
+			.body3left ul li{margin-top: 15px;}
+			.body3left ul li::before{content: "★"; color: red;}
+			#div{width: 230px;height: 150px;/* background-color: red; */position: absolute;/* top: 200px; */right: 10px;}
+			#share{width: 100px;height: 200px;background-color: rgba(0,0,0,0);position: absolute;left: -100px;top: 100px;}
+			#share span{width: 20px;height: 60px;background-color: orange;position: absolute;left: 100px;top: 70px;}
+			#share ul>li{ margin-bottom: 20px;}
+			#select{position: absolute; z-index: 1000;right: 165px;top: 30px;}
+			#select ul{background: white;width: 150px;height: 180px;border-radius: 3%;font-size: 12px;}
+			#select ul li{height: 10px;position: relative; z-index: 1000;margin-bottom: 10px;}
+			
+		</style>
+		
+		
+		
+		
+	</head>
+	<body>
+		<div class="concent">
+			<div class="navTopbox">
+				<div class="navtop" id="navtop1">
+					<p class="navleft"style="color:#ffdcab;;">学党史、助新风</p>
+					
+					<div class="appear"><a href="">首页<img src="./img/图标.png" class="sign"></a></div>
+					<div class="appear"><a href="">活动<img src="./img/图标.png" class="sign"></a></div>
+					<div class="appear"><a href="">生涯就业<img src="./img/图标.png" class="sign"></a></div>
+					<div class="appear"><a href="">心理<img src="./img/图标.png" class="sign"></a></div>
+					<div class="appear"><a href="">读书<img src="./img/图标.png" class="sign"></a></div>
+					<div class="appear"><a href="">校园号<img src="./img/图标.png" class="sign"></a></div>
+					<div id="time"></div>
+					<div id="search"style="margin-left:100px;margin-top: -5px;"><input id="search1" type="text" placeholder="请输入搜索内容" /></div><span><a href=""><img id="sign" style="margin-left: -10px; width: 40px;height: 35px;" src="./img/搜索.png" ></a></span>
+					<div id="select"style="display: none;">
+						<ul>
+							<li>建模</li>
+							<li>数学</li>
+							<li>全国高校</li>
+							<li>大学生</li>
+							<li>四史</li>
+							<li>党史</li>
+							<li>高校动态</li>
+							<li>中国共青团</li>
+							
+						</ul>
+					</div>
+					
+				</div>
+				
+				<div class="hidden" id="hidden1" style="display:none;width: 100%; clear: both;height: 0px;background: aliceblue;">
+					<ul>
+						<li><a href="">重要论述</a></li>
+						<li><a href="">要闻要论</a></li>
+						<li><a href="">学档资料</a></li>
+					</ul>
+				</div>
+				
+				
+			</div>
+			
+		</div>
+		<div class="box" id="box1" >
+				<!-- <img src="img/船政log.png" style="position: absolute;z-index: 30;width: 20%;height: 20%;right: 50px;opacity: 0.3;"> -->
+				<img src="./img/首页.jpg"  id="img">
+			<div ><img src="img/prev1.png" id="left" class="left" style="opacity=0.3"></div>
+			<div><img src="img/prev2.png"  id="right" class="right"></div>	
+			<ul class="circle">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="body" style="position: relative;">
+			<a href="">习近平出席领导人气候峰会并发表重要讲话</a>
+			<div class="body1">
+				<a href="" style="font-size: 20px;margin: 15px;font-weight: bold;display: inline-block;color: #000000;">黄坤明:在阅读红色经典中汲取文化养分和精神力量</a>
+				<li><a href="">人民日报：新时代高校党的建设的基本遵循</a></li>
+				<li><a href="">重温红色家书:感悟家国情怀 汲取奋进力量</a></li>
+				<li><a href="">上海传承红色基因、推进高质量发展</a></li>
+				<li><a href="">山西省将办实事、解难题贯穿党史学习教育全过程</a></li>
+				<li><a href="">嘉兴南湖的“星星火”形成中国革命的“殷殷雷”</a></li>
+			</div>
+			<div class="body2">
+				<a href="" style="font-size: 20px;margin: 15px;font-weight: bold;display: inline-block;color: #000000;">习近平在庆祝中国共产党成立95周年大会上的讲话</a>
+				<li><a href="">“百名红色讲解员讲百年党史”宣讲活动启动</a></li>
+				<li><a href="">党史学习教育领导小组部署开展“我为群众办实事”实践活动</a></li>
+				<li><a href="">各省区市党史学习教育领导小组负责同志座谈会召开</a></li>
+				<li><a href="">各省区市党史学习教育领导小组负责同志座谈会召开</a></li>
+				<li><a href="">党史教育用书出版座谈会暨专题宣讲动员会召开</a></li>
+			</div>
+			<div style="text-align: right;text-decoration:underline;color: red;"><a href="">更多>></a></div>
+			<div class="body3" style="margin-top: 15px;width: 100%;height: 350px;background-color: #e9e9ea;">
+				<div style="text-align: right;margin-bottom: 15px;"><a href="">更多>></a></div>
+				<div class="body3left" style="font-size: 20px; float: left;">
+					<div>党史百年</div>
+					<ul >
+						<li><a href="">东北振兴快马加鞭</a></li>
+						<li><a href="">全面实施改革强军战略 坚定不移走中国特色强军之路</a></li>
+						<li><a href="">解放南岛战役：开创我军渡海作战胜利的先河</a></li>
+						<li><a href="">新的历史条件下治国理政总方略</a></li>
+						<li><a href="">全面从严治党的制度保障</a></li>
+						<li><a href="">党的纪律为铁的纪律</a></li>
+					</ul>
+				</div>
+				<div class="body3left" style="font-size: 20px;float: left;">
+					<div>理论·经验</div>
+					<ul>
+						<li><a href="">党的建设的里程碑</a></li>
+						<li><a href="">创新红色文化教育 引领青少年健康成长</a></li>
+						<li><a href="">讲好党史故事 传承红色基因</a></li>
+						<li><a href="">凝聚起战胜一切艰难险阻的磅礴伟力</a></li>
+						<li><a href="">中国共产党与中国式现代化</a></li>
+						<li><a href="">始终保持马克思主义政党的鲜明本色</a></li>
+					</ul>
+				</div>
+				<div class="body3left" style="font-size: 20px;float: left;">
+					<div>学习动态</div>
+					<ul>
+						<li><a href="">吉林松原市扎实推进党史学习教育深入开展</a></li>
+						<li><a href="">广西以书为媒 让党史教育走入孩子心中</a></li>
+						<li><a href="">树牢宗旨意识 让群众得实惠</a></li>
+						<li><a href="">黑龙江农业农村厅：学党史　强业务</a></li>
+						<li><a href="">传承红色基因 创造新的辉煌</a></li>
+						<li><a href="">高质量推进实施“三项工程”</a></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<div id="div"style="background-image: url(img/小人.png);background-repeat: no-repeat;"></div>
+		<div style="border: 1px solid black;position: absolute;top: 300px;">
+			<div id="share">
+				<span>分享到</span>
+				<ul>
+					<li><a href="">微信分享</a></li>
+					<li><a href="">QQ分享</a></li>
+					<li><a href="">新浪微博</a></li>
+					<li><a href="">知乎</a></li>
+					<li><a href="">哔哩哔哩</a></li>
+				</ul>
+			</div>
+		</div>
+		<div style="padding-bottom:300px ;" id="Carousel">
+			<p style="font-size: 30px;font-weight: bold;color: #8B0000;text-align: center;">媒体集萃</p>
+			<div class="top" style="margin-top: -50px;">
+			    <ul class="pmain" id="pmain">
+			        <img src="img/新建文件夹1/1.png" alt="">
+			        <img src="img/新建文件夹1/2.png" alt="">
+			        <img src="img/新建文件夹1/3.jpg" alt="">
+			        <img src="img/1.jpg" alt="">
+			        <img src="img/新建文件夹1/5.png" alt="">
+			        <img src="img/新建文件夹1/6.png" alt="">
+			        <img src="img/新建文件夹1/7.jpg" alt="">
+			        <img src="img/新建文件夹1/8.png" alt="">
+			        <img src="img/2.jpg" alt="">
+			    </ul>
+			</div>
+		</div>
+		<div style="width: 100%;margin-top: -100px"><div style="border: 1px solid red;width: 90%;;margin:auto ;"></div></div>
+		<table style="width: 100%;">
+			<tr style="text-align: center;">
+				<td>版权所有：彩虹</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td>Email:xxxxxxx@qq.com</td>
+			</tr>
+		</table>
+			
+			
+			
+		
+	</body>
+</html>
+
+
+
+<script src="./js/tool.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/头部.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/小人.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/分享.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/轮播图.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var search = document.getElementById("search1")
+	var select = document.getElementById("select")
+	var selectli = select.getElementsByTagName("li")
+	// var sign = document.getElementById("sign")
+	for(let i =0;i<selectli.length;i++){
+		selectli[i].onclick = function(){
+			search.value = selectli[i-1].innerHTML		
+			select.style.display = "none"
+		}
+		
+	}
+	search.onfocus = function(){
+		select.style.display = "block"
+		
+	}
+	// search.onblur = function(){
+		
+	// 	select.style.display = "none"
+	// }
+	
+</script>
